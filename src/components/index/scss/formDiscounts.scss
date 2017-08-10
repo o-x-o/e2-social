@@ -1,0 +1,23 @@
+.formInput{
+        padding-bottom: 10px;
+        .form-group{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 0;
+                margin-top: 10px;
+                padding: 0 10px;
+                label{
+                        display: inline-block;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
+                        line-height: 34px;
+                        width:70px;
+                        box-sizing: border-box;
+                }
+                .iBox{
+                        height:auto;
+                        overflow: hidden;
+                        flex: 1;
+                }
+        }
+}

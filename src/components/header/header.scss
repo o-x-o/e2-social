@@ -1,0 +1,218 @@
+@import "./../../assets/scss/wap";
+.topbar{
+  height: 42px;
+  line-height: 42px;
+  background: #383a4c;
+  width: 100%;
+  z-index: 20;
+  transform:translateZ(0);
+  .userInfo {
+    line-height: 42px;
+    color:#fff;
+    float: left;
+    .s_avator{
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      position: relative;
+      top: 7px;
+      margin-left: 14px;
+      margin-right: 6px;
+      vertical-align: top;
+    }
+    .mess{
+      height:42px;
+      display: inline-block;
+      background: url("./../../assets/images/user_msg.png") no-repeat center;
+      width:26px;
+      vertical-align: top;
+      position: relative;
+      .count{
+        min-width: 18px;
+        height:18px;
+        overflow: hidden;
+        display: inline-block;
+        border-radius: 50%;
+        background: red;
+        position: absolute;
+        top:5px;
+        color: #fff;
+        text-align: center;
+        font:12px/18px $f-heiti;
+        right: -10px;
+      }
+    }
+    .username{
+      margin-right: 6px;
+    }
+    .userMsg{
+      width: 26px;
+      height: 19px;
+      position: relative;
+      top: 6px;
+      display: inline-block;
+      //background: url('../img/user_msg.png') no-repeat center;
+    }
+    .num{
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      height: 24px;
+      width: 24px;
+      text-align: center;
+      line-height: 24px;
+      border-radius: 50%;
+      color:#fff;
+      background: red;
+    }
+  }
+  .contrl_container{
+    height:auto;
+    overflow: hidden;
+    display: inline-block;
+    color: #fff;
+    .changePwd{
+      margin-right: 20px;
+    }
+    a{
+      margin-right: 20px;
+      color: #fff;
+      &.outIn{
+        padding-right: 40px;
+        background: url("http://cms.esocial-cloud.com/img/ico_logout.png") no-repeat right center;
+
+      }
+      display: inline-block;
+    }
+  }
+}
+.alertBox{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  z-index: 9999;
+  position: fixed;
+  left:0;
+  top:0;
+}
+.task{
+  height:600px;
+  width:700px;
+  overflow: hidden;
+  position: fixed;
+  left:0;
+  right:0;
+  z-index: 9999999;
+  padding: 2px;
+  background: rgba(0,0,0,0.6);
+
+  .taskBox{
+    width:100%;
+    height:100%;
+    background: #fff;
+    .lTask{
+      width:300px;
+      height:100%;
+      overflow: hidden;
+      overflow-y: scroll;
+      float: left;
+      display: inline-block;
+      vertical-align: top;
+      background: #fff;
+      box-sizing: border-box;
+      padding-top: 50px;
+      border-right: 1px solid #ccc;
+      position: relative;
+      .item{
+        border-bottom: 1px solid #cccccc;
+        height:auto;
+        overflow: hidden;
+        position: relative;
+        min-height: 80px;
+        padding: 10px 10px 10px 80px;
+        &.on{
+          background: #d9edf7;
+        }
+        .rBox{
+          height:auto;
+          overflow: hidden;
+          .t{
+            height:auto;
+            overflow:hidden;
+            font:14px/30px $f-heiti;
+            a{
+              text-decoration: none;
+              color: #000;
+            }
+          }
+          .timer{
+            height:auto;
+            overflow:hidden;
+            color: #ccc;
+            font:12px/24px $f-heiti;
+          }
+        }
+        .lBox{
+          width:60px;
+          height:60px;
+          display: inline-block;
+          position: absolute;
+          left:10px;
+          top:10px;
+          img{
+            width:100%;
+            height: 100%;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+    .rTask{
+      width:380px;
+      height:100%;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top;
+      background: #fff;
+      padding-top: 50px;
+      box-sizing: border-box;
+      position: relative;
+
+    }
+    .taskBtns{
+      height:50px;
+      overflow-y: hidden;
+      width:100%;
+      position: absolute;
+      left:0;
+      top:0;
+      text-align: right;
+      box-sizing: border-box;
+      padding-right: 10px;
+      background: #eeeeee;
+      border-bottom: 2px solid #000;
+      .editTaskBtn{
+        height:30px;
+        display: inline-block;
+        padding:0 20px;
+        margin: 10px;
+        color: #fff;
+        background: #cccccc;
+        font:14px/30px $f-heiti;
+        border-radius: 5px;
+        &.on{
+          background: #64a0d7;
+        }
+      }
+    }
+  }
+
+
+
+}
+.fr{
+  float: right;
+}
+.fl{
+  float: left;
+}

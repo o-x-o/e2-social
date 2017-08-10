@@ -1,0 +1,34 @@
+.bottom-placeholder{
+  width: 100%;
+  height: 38px;
+}
+.bottom{
+  height: 38px;
+  line-height: 38px;
+  width: 100%;
+  background: #19160b;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 12;
+}
+.bottom .copyRight{
+  float: left;
+  line-height: 38px;
+  color:#a7aaa5;
+  padding-left: 20px;
+}
+.bottom .fnList{
+  float: right;
+  line-height: 38px;
+  color:#a7aaa5;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+.bottom .fnList a{
+  color:#a7aaa5;
+}
+.bottom .fnList i{
+  color:#a7aaa5;
+}

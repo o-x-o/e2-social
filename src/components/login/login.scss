@@ -1,0 +1,29 @@
+.loginBox{
+  width:400px;
+  height: 280px;
+  overflow: hidden;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-left: -200px;
+  margin-top: -140px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 80px 30px 0;
+  box-sizing: border-box;
+  .btn{
+    width:100%;
+    background: #64a0d7;
+  }
+  .close{
+    width:32px;
+    height: 32px;
+    background: url("./../../assets/images/cuo_img.png") no-repeat center;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top:10px;
+    opacity: 1;
+  }
+}

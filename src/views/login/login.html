@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>登录</title>
+  <link rel="stylesheet" href="./../../../static/css/public.css">
+  <link rel="stylesheet" href="./../../../static/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+<div id="app"></div>
+</body>
+
+</html>
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+  <!--<meta charset="UTF-8">-->
+  <!--<title>营销精英</title>-->
+  <!--<link rel="stylesheet" href="css/lib/bootstrap.min.css">-->
+  <!--<link href="css/lib/login-show.css" rel="stylesheet">-->
+  <!--<link href="css/lib/login.css" rel="stylesheet">-->
+  <!--<script src="js/lib/jquery.min.js"></script>-->
+  <!--<script src="js/lib/bootstrap.min.js"></script>-->
+  <!--<script type="text/javascript">-->
+
+    <!--$(function(){-->
+      <!--$("#userLoginAccount").blur(function(){-->
+        <!--var userId=$("#userLoginAccount").val();-->
+        <!--$.ajax({-->
+          <!--type:"POST",-->
+          <!--url:"/anyone/findWechatCorpInfo.json",-->
+          <!--data:{-->
+            <!--"mobile":userId-->
+          <!--},-->
+          <!--success:function(data){-->
+            <!--console.log(data);-->
+            <!--if(data.success == '1'){-->
+              <!--$("#corpId").val(data.result[0].wechatId);-->
+              <!--$("#wechatName").val(data.result[0].wechatName);-->
+              <!--$("#wechatName").attr("type","text");-->
+              <!--$("#corpImg").attr("src",data.result[0].wechatLogo);-->
+              <!--$("#corpImg").attr("height","100px");-->
+              <!--$("#corpImg").attr("width","200px");-->
+            <!--}-->
+          <!--},-->
+          <!--error: function(xhr, type) {-->
+          <!--}-->
+        <!--});-->
+
+      <!--});-->
+
+      <!--$("#registeration").click(function(){-->
+        <!--$("#registform").show();-->
+        <!--$("#loginform").hide();-->
+
+      <!--});-->
+
+      <!--$("#goLogin").click(function(){-->
+        <!--$("#registform").hide();-->
+        <!--$("#loginform").show();-->
+      <!--});-->
+
+      <!--$("#loginButton").click(function(){-->
+        <!--login();-->
+      <!--});-->
+
+
+
+    <!--});-->
+
+    <!--function login(){-->
+      <!--//$('#yourformid').serialize()-->
+      <!--var username=$("#userLoginAccount").val();-->
+      <!--var password=$("#userPassword").val();-->
+      <!--$.ajax({-->
+        <!--type:"POST",-->
+        <!--url:"/authentication.json",-->
+        <!--data:$('#loginform').serialize(),-->
+        <!--success:function(data){-->
+          <!--if(data.success == '1'){-->
+            <!--self.location='index.html';-->
+          <!--}-->
+        <!--},-->
+        <!--error: function(xhr, type) {-->
+        <!--}-->
+      <!--});-->
+    <!--}-->
+  <!--</script>-->
+<!--</head>-->
+<!--<body class="login">-->
+<!--</body>-->
+<!--</html>-->

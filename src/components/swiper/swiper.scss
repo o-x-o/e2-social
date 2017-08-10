@@ -1,0 +1,26 @@
+/* pages/component/swiper.wxss */
+@import "../../assets/scss/wap";
+.swiper-container{
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    .swiper-wrapper{
+        .swiper-slide{
+            img{
+                width:100%;
+                height:100%;
+                vertical-align: top;
+            }
+        }
+    }
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            width:rem(10);
+            height:rem(10);
+            &.swiper-pagination-bullet-active{
+                background: #B82431;
+            }
+        }
+    }
+
+}

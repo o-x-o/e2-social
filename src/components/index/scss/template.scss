@@ -1,0 +1,242 @@
+@import "indexCommon";
+.list-group{
+  box-sizing: border-box;
+  padding-bottom: 400px;
+  li{
+    margin-top: 20px;
+    .list-group-item{
+      height:auto;
+      overflow: hidden;
+      background: #f1f1f1;
+      border:0;
+      margin-top:10px;
+      .template-container{
+        height:auto;
+        overflow: hidden;
+        background: #ffffff;
+        &.imgBox{
+          height:auto;
+          overflow: hidden;
+          padding: 10px;
+          background: #fff;
+          img{
+            width:100%;
+            vertical-align: top;
+          }
+          p{
+            height:auto;
+            overflow: hidden;
+            margin-bottom: 0;
+            font:12px/38px $f-yahei;
+            text-align: center;
+          }
+        }
+        &.textBox{
+          background: #ffffff;
+          height:auto;
+          overflow: hidden;
+          padding: 10px;
+          box-sizing: border-box;
+          font:12px/30px $f-yahei;
+          text-align: justify;
+          padding-bottom: 10px;
+        }
+        &.biaojiaBox{
+          height:auto;
+          overflow: hidden;
+          background: #ffffff;
+          padding: 10px;
+          position: relative;
+          h3{
+            height:auto;
+            overflow: hidden;
+            font:14px/24px $f-yahei;
+            color: #000;
+            margin-top: 20px;
+          }
+          div.topLine{
+            width:100%;
+            height:12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            left:10px;
+            top:10px;
+            input{
+              border:0;
+              outline: none;
+            }
+            span.l{
+              display: block;
+              overflow: hidden;
+              flex: 1;
+              border-top:1px solid #000000;
+            }
+            span.r{
+              width:120px;
+              display: inline-block;
+              overflow: hidden;
+            }
+          }
+          div.pro{
+            height:auto;
+            overflow: hidden;
+            font:12px/20px $f-yahei;
+            display: flex;
+            flex-direction: row;
+            color: #000;
+            input{
+              border:0;
+              outline: none;
+              display: inline-block;
+            }
+            span.l{
+              display: inline-block;
+              overflow: hidden;
+              height:auto;
+              padding: 12px 0;
+              color: #333;
+              input{
+                width:100px;
+              }
+            }
+            p.r{
+              display: block;
+              flex:1;
+              padding:12px 0;
+              border-bottom:1px solid #000;
+              text-align: right;
+              color: #333;
+              span{
+                display: inline-block;
+                vertical-align: top;
+              }
+              span.r{
+                color: #eb1212;
+                margin-left: 3px;
+                display: inline-block;
+                vertical-align: top;
+                input{
+                  width:50px;
+                }
+              }
+            }
+          }
+        }
+        &.chanpinCs{
+          height:auto;
+          overflow: hidden;
+          background: #ffffff;
+          padding:20px 10px;
+          text-align: center;
+          a{
+            font:16px/18px $f-yahei;
+            color: #000;
+            display: inline-block;
+            border-bottom: 1px solid #000;
+          }
+        }
+        &.video{
+          height:auto;
+          overflow: hidden;
+          padding: 10px;
+          background: #ffffff;
+          img{
+            width:100%;
+            vertical-align: top;
+          }
+        }
+        &.table{
+          margin-bottom: 0;
+          table.table{
+            margin-bottom: 0;
+          }
+        }
+        &.list{
+          ul{
+            li{
+              margin-top: 0;
+              font:14px/24px $f-yahei;
+              text-indent: 10px;
+            }
+          }
+        }
+        &.discount{
+          img{
+            width:100%;
+            vertical-align: top;
+          }
+        }
+        &.formInput{
+          padding-bottom: 10px;
+          .form-group{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 0;
+            margin-top: 10px;
+            padding: 0 10px;
+            label{
+              display: inline-block;
+              padding-bottom: 0;
+              margin-bottom: 0;
+              line-height: 34px;
+              width:70px;
+              box-sizing: border-box;
+            }
+            .iBox{
+              height:auto;
+              overflow: hidden;
+              flex: 1;
+            }
+          }
+        }
+        &.table2{
+          table{
+            th,td{
+              border: 0;
+            }
+            th{
+              text-align: right;
+            }
+          }
+        }
+      }
+      .chooseTpl{
+        height:auto;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        .icon{
+          width:28px;
+          height:auto;
+          overflow: hidden;
+          display: inline-block;
+          margin-right:10px;
+          background: url("../images/add.png") no-repeat center;
+          background-size: 28px;
+        }
+        p{
+          height:auto;
+          overflow: hidden;
+          font:12px/18px $f-yahei;
+          color: #333;
+          box-sizing: border-box;
+          padding: 18px 0;
+          margin-bottom: 0;
+          flex:1;
+        }
+      }
+    }
+  }
+
+  &.edit-group{
+    li,.list-group-item{
+      background: none;
+      padding: 0;
+    }
+  }
+}
+.mt10{
+  margin-top: 10px;
+}

@@ -1,0 +1,10 @@
+$f-yahei:"\5FAE\8F6F\96C5\9ED1", Helvetica,Microsoft YaHei;
+$f-heiti:SimHei,Helvetica,Arial,Verdana,sans-serif;
+$f-simsun:SimSun,Helvetica,Arial,Verdana,sans-serif;
+$f-arial:Arial,Verdana,Helvetica,sans-serif;
+$f-Regular:'PingFang SC Regular', 'PingFang SC';
+$f-s:40px;
+$f:37.5;
+@function rem($s:0){
+  @return #{($s/$f)}rem;
+}

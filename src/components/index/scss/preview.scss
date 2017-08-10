@@ -1,0 +1,23 @@
+.list-group.previewBox{
+  overflow: hidden;
+  height:430px;
+  overflow-y: scroll;
+  padding-bottom: 0;
+  li{
+    margin-top: 0;
+    div.iBox{
+      line-height: 34px;
+    }
+    input,textarea{
+      border: 0;
+      outline: none;
+    }
+  }
+}
+.editTitle{
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 0;
+}
+

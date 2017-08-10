@@ -1,0 +1,62 @@
+@import "./../../../assets/scss/wap";
+.header{
+  height:50px;
+  overflow-y: hidden;
+  border-bottom: 1px solid #000;
+  display: flex;
+  flex-direction: row;
+  .name{
+    height:auto;
+    overflow: hidden;
+    display: block;
+    flex:1;
+    font:20px/40px $f-yahei;
+    color: #383a4c;
+  }
+  .icon{
+    width:30px;
+    height:40px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    &.icon1{
+      background: url("../images/modify.png") no-repeat center;
+      &.hover{
+      }
+    }
+    &.icon2{
+      background: url("../images/icon-head-data.png") no-repeat center;
+      &:hover{
+        background: url("../images/icon-head-data.png") no-repeat center;
+      }
+    }
+    &.icon3{
+      background: url("../images/preview-btn.png") no-repeat center;
+      &:hover{
+        background: url("../images/preview-btn-hover.png") no-repeat center;
+      }
+    }
+    &.icon4{
+      background: url("../images/completion-of-task.png") no-repeat center;
+      &:hover{
+        background: url("../images/completion-of-task.png") no-repeat center;
+      }
+    }
+    &.icon5{
+      background: url("../images/icon-head-save.png") no-repeat center;
+      &:hover{
+        background: url("../images/icon-head-save-hover.png") no-repeat center;
+      }
+    }
+    &.icon6{
+      background: url("../images/icon-head-drag.png") no-repeat center;
+      &.on{
+        background: url("../images/icon-head-drag-on.png") no-repeat center;
+      }
+    }
+    &.icon7{
+      background: url("../images/cut.png") no-repeat center;
+    }
+  }
+}

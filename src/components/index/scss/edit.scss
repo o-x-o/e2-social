@@ -1,0 +1,194 @@
+@import "indexCommon";
+.editTitle{
+  height:auto;
+  overflow: hidden;
+  margin-top:20px;
+  border-bottom: 1px solid #cccccc;
+  textarea{
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    border: 0;
+    outline: none;
+    text-align: center;
+  }
+}
+.editTime{
+  height:auto;
+  input{
+    width:100%;
+    height:44px;
+    overflow-y: hidden;
+    border:0;
+    outline: none;
+    text-align: center;
+  }
+}
+.editBox{
+  overflow: hidden;
+  overflow-y: scroll;
+  height:auto;
+  box-sizing: border-box;
+  &.list-group{
+    li{
+      height:auto;
+      overflow: hidden;
+      padding-bottom: 5px;
+
+    }
+    .vue-html5-editor{
+      .content{
+        ol{
+          list-style:inside;
+          list-style-type:decimal;
+        }
+        ul{
+          list-style:square;
+          list-style:inside;
+        }
+      }
+
+      li{
+        margin-top: 0;
+      }
+    }
+    .uploader,.uploader-video{
+      height:auto;
+      overflow:hidden;
+      text-align: center;
+      img{
+        max-width:100%;
+        vertical-align: top;
+      }
+    }
+    .imgBox{
+      height:auto;
+      overflow: hidden;
+
+      div.input{
+        height:auto;
+        overflow: hidden;
+        vertical-align: top;
+        &:hover,&:active{
+          background: #eee;
+        }
+        input{
+          height:38px;
+          width:100%;
+          font:12px/38px $f-yahei;
+          overflow: hidden;
+          text-align: center;
+          color: #333;
+          box-sizing: border-box;
+          padding: 0 10px;
+          border:0;
+          outline: none;
+          background: none;
+        }
+
+      }
+
+    }
+    &.edit-group{
+      .list-group-item{
+        .textBox{
+          height:auto;
+          overflow: hidden;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+.fa-anchor{
+  width:14px;
+  height:14px;
+  display: inline-block;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB9UlEQVRYR+2XgS0EURCG/6sAFaACVIAKUAEqQAWoABWgAypwKqADVIAKyCczm/WydmfeRi4Sk4jN3Zv5/5mdefPfRDO2SSX+vKRdSdvm/yjpVNJbNl4NAcAfJC0VYICvSXrOkKghMJW0LulW0omBHVpFqAQkwlZD4EPSi6TVouRkvihpOVOFLAFAKf+9pI0iTa/MpiSeQ5YlQFAqgLUzpS+eJPF/IdOMNQTOJR1YmXnG6AGa8lrSXih1O1RDANcra7o2Fq+FsUyNYi0BgL0SPF9YFTLJf50dQ4ARPDZELiEfyRSJP0WAsbsLphcexUwFZk6gTL5NKJxxGSRTgX8Cv14BrlBuuKiN6YEGq90D7HI23X6QQS0Bklxx3eAE2GKvBnxk1+wQjzaBHUk3Qw52XZ+195ATIBjMEBQoHdd6fTEB3LID7H9GccjcB0HDa5iWY+iigkXTJzJxvizQ+ipHhdkbrO1vYqYkwEGk1ZytVYiw49tCkyAE42xpfMdmdEMjoJ75nPPvphuald11ESG7qAQk3GhQnAhYquGSBGT5A5BYboDzqonV2E83YReJoffb930nOA59VzGZ0phI8DHGO6dnOn8vRHYBZUNsZIkAjF+vQo4Q8OyjRELAHjRDYIhICngMAfelUX28GNfwj5HIFIxpupTvJxirbSHBfh8DAAAAAElFTkSuQmCC) no-repeat center;
+  background-size:100%;;
+}
+.uploader_confirm{
+  height:auto;
+  overflow: hidden;
+  font:14px/34px $f-yahei;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  .uploader_btn{
+    position: relative;
+    input{
+      width:100%;
+      height:100%;
+      z-index: 2;
+      position: absolute;
+      left:0;
+      top:0;
+      opacity: 0;
+    }
+  }
+  .conf{
+    display: block;
+    flex:1;
+    margin: 0 10px;
+    background: #64a0d7;
+    text-align: center;
+    cursor:pointer;
+  }
+}
+.myEdit{
+  height: 30px;
+  background: #ccc;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  position: relative;
+  display: none;
+  button{
+    float: right;
+    margin-top: 4px;
+    margin-right: 10px;
+  }
+}
+.dragging{
+  ul{
+    li{
+      position: relative;
+      .myEdit{
+        display: inline-block;
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index: 9999;
+        background: #ffffff;
+        opacity: 0;
+        .close{
+          width:30px;
+          height:30px;
+          overflow: hidden;
+          display: none;
+          background: url("./../../index/images/clos.png") no-repeat center;
+          background-size: 100%;
+          position: absolute;
+          right: 0;
+          top:0;
+          z-index: 999999;
+          opacity: 1;
+
+        }
+        &:hover{
+          opacity: 0.4;
+          .close{
+            display: inline-block;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+.vue-html5-editor>.toolbar>.dashboard{
+  position: static;
+}
