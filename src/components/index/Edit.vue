@@ -10,7 +10,11 @@
           <span :class="['icon','icon6',isDragging?'on':'']" @click="switchDragging"></span>
         </div>
         <div class="editTitle">
+
           <textarea rows="2" placeholder="请输入标题，最长标题不能超过26个字" v-model="html5PageTitle"></textarea>
+          <input type="hidden" v-model="id" />
+          <input type="hidden" v-model="html5PageCode" />
+
         </div>
 
         <div class="editTime"><input type="text" placeholder="请输入日期" @click="picker" v-model="html5PageTimer"></div>
@@ -80,6 +84,8 @@
     },
     data (){
       return {
+        id:'',
+        html5PageCode: '',
         isPicker: false,
         html5PageTitle: '',
         html5PageTimer: '',
@@ -353,42 +359,27 @@
           })
 
 
-
-//          jquery('#A').find('input').each(function (ev) {
-//            if (jquery(this).attr('data-type') != 'noEach') {
-//              var index = jquery(this).parents('li.liIndex').attr('data-idx');
-//              var val = jquery(this).val();
-//              jquery(this).attr('data-val', val);
-//              jquery(this).attr('value', val);
-//              _self.list2[index].editHtml = jquery(this).parents('li.liIndex div.list-group-item').html();
-//            }
-//
-//          });
-//          jquery('#A').find('textarea').each(function (ev) {
-//            if (jquery(this).attr('data-type') != 'noEach') {
-//              var index = jquery(this).parents('li.liIndex').attr('data-idx');
-//              var val = jquery(this).val();
-//              jquery(this).attr('data-val', val);
-//              jquery(this).attr('value', val);
-//              _self.list2[index].editHtml = jquery(this).parents('li.liIndex div.list-group-item').html();
-//            }
-//          });
-
           console.log(this.html5PageTitle);
 
           util.request({
             method: 'post',
             interface: 'draftArticle',
             data: {
+              id: this.id,
               html5PageTitle: this.html5PageTitle,
               htnl5TemplateCode: this.tplCode,
-              html5PageindexImg: this.thumbnail
+              html5PageindexImg: this.thumbnail,
+              html5PageCode: this.html5PageCode
+
             }
           }).then(res => {
             var html5PageCode = res.result.result.html5PageCode;
             var html5Appid=res.result.result.html5Appid;
+            var id=res.result.result.id;
+
             var temp = 0;
             var len = this.list2.length;
+            console.log(this.list2);
             for (var i = 0; i < len; i++) {
               var row = this.list2[i];
               if (row.type == 'discount') {
@@ -400,6 +391,7 @@
                     method: 'post',
                     interface: 'saveArticleArea',
                     data: {
+                      id:id,
                       fileCode: html5PageCode,
                       sequence: index,
                       areaCode: rowData.code,
@@ -428,6 +420,7 @@
                     method: 'post',
                     interface: 'saveArticleArea',
                     data: {
+                      id:id,
                       fileCode: html5PageCode,
                       sequence: index,
                       areaCode: rowData.code,
@@ -474,6 +467,7 @@
             console.log(res);
           })
         });
+          window.location.reload();
 
       },
       preview(){
@@ -531,6 +525,8 @@
           }
         }).then(res => {
             this.html5PageTitle=res.result.result.html5PageTitle;
+            this.id = res.result.result.id;
+            this.html5PageCode = res.result.result.html5PageCode;
           var temp=[];
           for(var i=0,m=res.result.result.fileAreaList.length;i<m;i++){
               var row=res.result.result.fileAreaList[i];
