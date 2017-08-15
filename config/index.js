@@ -43,7 +43,7 @@ module.exports = {
 
     proxyTable: {
       '/esocial': {
-        target: 'http://112.126.90.50:8080',
+          target: 'http://112.126.90.50:8080',
         changeOrigin: true,
         pathRewrite: {
           '^/esocial': ''
